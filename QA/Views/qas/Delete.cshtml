@@ -1,0 +1,32 @@
+﻿@model QA.Models.qa
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+
+<h4>প্রশ্ন / উত্তর মুছে ফেলুন</h4>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Question)<span> - প্রশ্ন সমুহঃ </span>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Question)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Answer)<span> - উত্তর সমুহঃ </span>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Answer)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="qaId" />
+        <input type="submit" value="Delete - মুছে ফেলুন" class="btn btn-danger" /> 
+        <a asp-action="Index" class="btn btn-info">Back to Question - প্রশ্নে ফিরে যান</a>
+    </form>
+</div>

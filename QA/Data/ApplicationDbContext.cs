@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using QA.Models;
 
 namespace QA.Data
 {
@@ -12,5 +13,6 @@ namespace QA.Data
             : base(options)
         {
         }
+        public DbSet<QA.Models.qa> qa { get; set; }
     }
 }

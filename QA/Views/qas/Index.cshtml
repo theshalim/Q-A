@@ -1,0 +1,44 @@
+﻿@model IEnumerable<QA.Models.qa>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a asp-action="Create" class="btn btn-info">Create New - প্রশ্ন তৈরি</a>
+</p>
+<table class="table table-bordered tab-pane table-hover">
+    <thead>
+        <tr>
+            <th >
+                @Html.DisplayNameFor(model => model.Question)<span> - আপনার প্রশ্ন</span>
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Answer)
+            </th>*@
+            <th>Action - করনীয় </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+       
+            <tr>
+                <td class="col-md-8">
+                    @Html.DisplayFor(modelItem => item.Question)
+                </td>
+                @*<td>
+                @Html.DisplayFor(modelItem => item.Answer)
+            </td>*@
+                <td class="col-md-4">
+                    <a asp-action="Details" asp-route-id="@item.qaId" class="btn btn-outline-info">উত্তর</a>
+                    <a asp-action="Edit" asp-route-id="@item.qaId" class="btn btn-outline-dark">এডিট</a>
+                    <a asp-action="Delete" asp-route-id="@item.qaId" class="btn btn-outline-danger">ডিলিট</a>
+                </td>
+            </tr>
+        
+            }
+        
+    </tbody>
+</table>

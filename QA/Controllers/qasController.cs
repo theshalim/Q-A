@@ -11,7 +11,7 @@ using QA.Models;
 
 namespace QA.Controllers
 {
-    [Authorize]
+   
     public class qasController : Controller
     {
         private readonly ApplicationDbContext _context;

@@ -17,7 +17,6 @@
   <ItemGroup>
     <Folder Include="Areas\MasterData\Controllers\" />
     <Folder Include="Areas\MasterData\Data\" />
-    <Folder Include="Areas\MasterData\Views\" />
   </ItemGroup>
 
 </Project>

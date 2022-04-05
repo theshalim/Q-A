@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using QA.Areas.MasterData.Models;
 using QA.Models;
 
 namespace QA.Data
@@ -14,5 +15,7 @@ namespace QA.Data
         {
         }
         public DbSet<QA.Models.qa> qa { get; set; }
+        public DbSet<MasterData> MasterDatas { get; set; }
+        public DbSet<Category> Categorys { get; set; }
     }
 }

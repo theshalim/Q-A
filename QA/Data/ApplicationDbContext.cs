@@ -14,7 +14,7 @@ namespace QA.Data
             : base(options)
         {
         }
-        public DbSet<QA.Models.qa> qa { get; set; }
+        public DbSet<qa> qa { get; set; }
         public DbSet<MasterData> MasterDatas { get; set; }
         public DbSet<Category> Categorys { get; set; }
     }

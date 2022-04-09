@@ -13,6 +13,8 @@ using Microsoft.EntityFrameworkCore;
 using QA.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using QA.Services;
+using QA.Services.Service;
 
 namespace QA
 {
@@ -34,9 +36,8 @@ namespace QA
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
+            services.AddTransient<IMasterData, MasterDataService>();
+            services.AddDbContext<ApplicationDbContext>(options =>options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)

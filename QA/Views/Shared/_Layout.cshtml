@@ -99,13 +99,14 @@
         <a class="nav-link  nav-menu btn btn-info btn-lg border" asp-area="" asp-controller="qas" asp-action="Index"><i class="fa fa-question-circle"></i> প্রশ্নোত্তর</a>
         <a class="nav-link  nav-menu btn btn-info btn-lg border" asp-area="" asp-controller="Home" asp-action="Privacy"><i class="	fa fa-bullseye"></i> প্রাইভেসি</a>
         <a class="nav-link  nav-menu btn btn-info btn-lg border" asp-area="" asp-controller="Home" asp-action="Contact"><i class="fa fa-paper-plane"></i> যোগাযোগ</a>
-       
+        <a class="nav-link  nav-menu btn btn-info btn-lg border" asp-area="MasterData" asp-controller="Master" asp-action="Index"><i class="fa fa-paper-plane"> সেটিং</i> </a>
+
     </div>
 
     <div class="container-fluid main">
         <partial name="_CookieConsentPartial" />
         <main role="main" class="pb-3 renderBody">
-            @RenderBody();
+            @RenderBody()
         </main>
     </div>
 

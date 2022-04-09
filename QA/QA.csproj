@@ -13,10 +13,4 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
   </ItemGroup>
 
-
-  <ItemGroup>
-    <Folder Include="Areas\MasterData\Controllers\" />
-    <Folder Include="Areas\MasterData\Data\" />
-  </ItemGroup>
-
 </Project>

@@ -10,7 +10,7 @@ namespace QA.Areas.MasterData.Models
     {
         [Key]
         public int CategoryId { get; set; }
-        [Required, MaxLength(50)]
+        [MaxLength(50)]
         public String CategoryName { get; set; }
         public virtual ICollection<MasterData> MasterData { get; set; }
 

@@ -50,7 +50,17 @@
                 }
             .main{
                     margin-left:160px;
+                   
             }
+        .navbar {
+            width: 100%;
+            position: fixed;
+            margin-top: -100px;
+            display:block;
+        }
+        .renderBody{
+            margin-top:100px;
+        }
           
     </style>
 </head>
@@ -92,9 +102,9 @@
        
     </div>
 
-    <div class="container main">
+    <div class="container-fluid main">
         <partial name="_CookieConsentPartial" />
-        <main role="main" class="pb-3">
+        <main role="main" class="pb-3 renderBody">
             @RenderBody();
         </main>
     </div>
